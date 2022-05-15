@@ -9,9 +9,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    override func loadView() {
+        super.loadView()
+        print("loadView")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print("viewDidLoad()")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear()")
+    }
+    
+    override func viewWillLayoutSubviews() {
+        print("viewWillLayoutSubviews()")
+    }
+    
+    override func viewDidLayoutSubviews() {
+        print("viewDidLayoutSubviews()")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+         print("viewDidAppear()")
     }
 
     @IBOutlet weak var label: UILabel!
